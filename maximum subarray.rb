@@ -22,9 +22,9 @@
 # if you meet a negative value thats bigger than all the pozzes to its left . everything is dead in that branch
 
 def max_sub_array(nums)
-    i=0
+    
     rollingsum=0
-    best = nums[i]
+    best = nums[0]
     nums.each do |ele|
         rollingsum+=ele
         
@@ -36,7 +36,6 @@ def max_sub_array(nums)
 			rollingsum = 0
 		end
 
-		i+=1
 	end
 	
 	return best
