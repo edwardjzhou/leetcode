@@ -36,19 +36,10 @@
  */
 var rotate = function(nums, k) {
     k = k % nums.length
-    let answer = []
-    let temp
-    // for(let i = 0; i < nums.length; i++){
-    //     nums[(i + k)%nums.length] = nums[i]
-    // }
-
-    for(let i = 0; i <= k; i++){
-        nums.push(nums[i])
+    for( i = 0 ; i < k; i++){
+        nums.unshift(nums.pop())
     }
-
-    nums.splice(k+1)
     return nums
-    
 };
 
 console.log(rotate([1, 2, 3, 4, 5, 6, 7], k = 3))
